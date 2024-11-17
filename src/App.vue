@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TheHeader from './components/layout/TheHeader.vue';
+import TheHeader from "./components/layout/TheHeader.vue";
 
 export default {
   components: {
@@ -20,12 +20,12 @@ export default {
     },
   },
   created() {
-    this.$store.dispatch('tryLogin');
+    this.$store.dispatch("tryLogin");
   },
   watch: {
     didAutoLogout(curValue, oldValue) {
       if (curValue && curValue !== oldValue) {
-        this.$router.replace('/coaches');
+        this.$router.replace("/coaches");
       }
     },
   },
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 p,
 h1,
@@ -44,7 +44,7 @@ h5,
 h6,
 span,
 label {
-  color: #eee;
+  color: #000000;
 }
 
 input,
@@ -52,7 +52,6 @@ textarea {
   border: 1px solid #222;
   background-color: #2905682c;
   transition: background 0.4s, color 0.4s;
-
 }
 
 input:focus,
@@ -68,12 +67,12 @@ textarea:focus {
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #434343;
+  background-color: #ffffff;
 }
 
 .route-enter-from {
@@ -98,4 +97,5 @@ body {
 .route-leave-from {
   opacity: 1;
   transform: translateY(0);
-}</style>
+}
+</style>
