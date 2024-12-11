@@ -24,7 +24,7 @@ export default {
       URL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=';
     }
 
-    const firebaseKEY = `AIzaSyDmGMhWZw5b9q9zadcOm-u4BIgN5S0aQ4o`;
+    const firebaseKEY = 'YOUR KEY HERE';
     const response = await fetch(URL + firebaseKEY, {
       method: 'POST',
       body: JSON.stringify({
@@ -56,7 +56,7 @@ export default {
       userId: responseData.localId,
     });
   },
-  
+
   tryLogin(context) {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
@@ -93,8 +93,8 @@ export default {
     });
   },
 
-  autoLogout(context){
-    context.dispatch('logout')
+  autoLogout(context) {
+    context.dispatch('logout');
     context.commit('setAutoLogout');
-  }
+  },
 };
